@@ -2,7 +2,7 @@ package org.usfirst.frc.team2374.robot.subsystems;
 
 import org.usfirst.frc.team2374.robot.RobotMap;
 import org.usfirst.frc.team2374.robot.commands.DrivetrainTeleop;
-import org.usfirst.frc.team2374.util.TwoEncoderPIDSource;
+import org.usfirst.frc.team2374.robot.subsystems.TwoEncoderPIDSource;
 
 import com.ctre.phoenix.motorcontrol.ControlMode;
 import com.ctre.phoenix.motorcontrol.can.TalonSRX;
@@ -22,7 +22,8 @@ public class Drivetrain extends Subsystem {
 	
 	// keep in mind TalonSRX has capability to limit max amperage (look up
 	// CTRE Phoenix documentation)
-	private TalonSRX middleLeft, middleRight, frontLeft, frontRight , backLeft, backRight;
+	//middleLeft and middleRight were deleted below
+	private TalonSRX frontLeft, frontRight , backLeft, backRight;
 	// if these don't work look up CTRE magnetic encoders (the ones that go on a talon because duck everything)
 	private Encoder leftEncoder, rightEncoder;
 	private TwoEncoderPIDSource driveIn;
